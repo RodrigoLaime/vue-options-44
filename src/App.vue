@@ -7,6 +7,7 @@
   <div>
     <Modal />
   </div>
+  <div>{{ text }}</div>
 </template>
 
 <script>
@@ -18,6 +19,7 @@ export default {
   data() {
     return {
       show: false,
+      text: "Hola Vue",
     };
   },
 };
