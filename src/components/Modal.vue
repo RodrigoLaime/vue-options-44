@@ -1,11 +1,13 @@
 <template>
   <div>
     <button @click="toggle">Modal</button>
-    <div v-show="show" class="modal">
-      <h1>Titulo</h1>
-      <p>Mensage</p>
-      <button @click="toggle">Cerrar</button>
-    </div>
+    <teleport to="body">
+      <div v-show="showw" class="modal">
+        <h1>Titulo</h1>
+        <p>Mensage</p>
+        <button @click="toggle">Cerrar</button>
+      </div>
+    </teleport>
   </div>
 </template>
 
@@ -13,12 +15,12 @@
 export default {
   data() {
     return {
-      show: false,
+      showw: false,
     };
   },
   methods: {
     toggle() {
-      this.show = !this.show;
+      this.showw = !this.showw;
     },
   },
 };
